@@ -520,5 +520,14 @@ namespace U4_BW1_LL
 
             Response.Redirect("AcquistoAbbonamento.aspx");
         }
+
+        protected void controlloSessione(object sender, EventArgs e)
+        {
+            foreach (string key in Session.Keys)
+            {
+                object value = Session[key];
+                Response.Write($"Chiave: {key}, Valore: {value}");
+            }
+        }
     }
 }

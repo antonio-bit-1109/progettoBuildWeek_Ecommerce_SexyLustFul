@@ -124,9 +124,9 @@
                           <h6>costo 179 euro</h6>
                      </div>
                  </div>
-
+               
              </div>
-
+                 <asp:Button Text="checkSessione" runat="server"  OnClick="controlloSessione" />
 
 
     <%-- RIEPILOGO ORDINI  --%>
