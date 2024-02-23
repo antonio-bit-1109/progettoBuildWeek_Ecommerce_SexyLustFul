@@ -7,7 +7,7 @@ namespace U4_BW1_LL
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session != null)
+            if (Session["tipoAbbonamento"] != null)
             {
                 // estraggo l'oggetto abbonamento dalla sessione
                 Abbonamento nuovoAbbonamento = (Abbonamento)Session["tipoAbbonamento"];
