@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="U4_BW1_LL.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="it">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Applicazione ASP.NET</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+
+</head>
+<body>          
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark position-sticky top-0" style="background-color: #0A0A0A; z-index:999;">       
+            <div class="container">
+                <div class="collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 align-items-center">
+                        <p runat="server" id="Benvenuto" class="navSexyLink fs-5 me-3 mb-0"> </p>
+                    </ul>
+                </div>
+                <div>
+                    <a class="navbar-brand mx-auto" runat="server" href="~/">
+                        <img src=".\assets\imgs\Lustlogo.png" style="width: 180px" alt="LustLogo" />
+                    </a>
+                </div>
+                
+                <div class="d-flex align-items-center">    
+                    <a class="nav-link me-2" runat="server" href="~/" ><i class="bi bi-house navSexyLink fs-4"></i></a>
+                    <a class="nav-link me-2 position-relative" runat="server" href="~/Carrello.aspx"><i class="bi bi-cart2 navSexyLink fs-4" ></i><span id="cartBadge" runat="server" class="badge badge-danger"></span></a>
+                    <a class="nav-link" runat="server" href="~/ProfilePage.aspx"><i class="bi bi-person navSexyLink fs-4 me-3" ></i></a>
+                    <a runat="server" id="logoutLink" class="nav-link ms-1 stileLink" >
+                        <asp:Button ID="logoutBtn" runat="server" CssClass="btn btn-transparent navSexyLink" Text="Log Out" OnClick="LogOut" />
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+        <div class="container body-content siteMinHeight">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+        </div>
+        <footer class="sexyFooter">
+            <div class="container py-3 text-center">
+                <p class="mb-0">&copy; <%: DateTime.Now.Year %> - Lusful Lair</p>
+            </div>
+        </footer>
+    </form>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+    </asp:PlaceHolder>
+
+</body>
+</html>

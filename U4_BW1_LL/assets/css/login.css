@@ -1,0 +1,157 @@
+﻿/*@font-face {
+    font-family: 'SexyFont';
+    src: url('../../Oraghon Script.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MaybeSexy';
+    src: url('../../Ronsley Script.ttf') format('truetype');
+}*/
+
+.navBarFluo {
+    background-color: #ed0b91;
+    color: black;
+    
+}
+
+.colorNotFluo {
+    background-color: black;
+    color: #ed0b91;
+    
+}
+
+#btnAccedi, #btnRegistrati {
+    cursor: pointer;
+}
+
+/*.SeducentFont {
+    font-family: 'SexyFont';
+}
+
+.maybeSexy {
+    font-family: 'MaybeSexy';
+}*/
+
+.heartbeat:hover {
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+.TUMTUM {
+    animation: heartbeat 2s ease-in-out infinite both;
+}
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+}
+
+
+.slide-in-left {
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.sexyBtn {
+    background-color: #ed0b91;
+    color: black;
+}
+
+    .sexyBtn:hover {
+        background-color: black;
+        color: #ed0b91;
+    }
+
+.sexyAlert {
+    background-color: #FFACD2; 
+}
+
+.disclaimerSettings {
+    height: calc(100vh - 106px);
+    background: linear-gradient(#0A0A0A 50%,#121212 100%);
+}
+#imgTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    opacity: 1;
+}
+
+.sexyBtn {
+    border: 2px solid #ed0b91;
+    background-color: transparent;
+    color: #ed0b91;
+}
+
+    .sexyBtn:hover {
+        border: 2px solid #ed0b91;
+        background-color: #f586c966;
+        color: #ed0b91;
+    }
+.fadeOut {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.d-none {
+    display: none !important;
+}
+
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
