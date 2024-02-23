@@ -94,11 +94,42 @@
                  </div>
              </div>
 
-         </div>                     
+             <div class="text-start my-5"> <h2 class="display-2 sexyPink2"> Sezione Abbonamenti </h2>
+                 <h2 class="display-4 sexyPink2">Acquista Abbonamento</h2>
+             </div>
+
+             <div class="row">
+                
+                 <div class="col-4">                   
+                     <div class="bg-primary border border-1 d-flex flex-column align-items-center altezza">
+                          <asp:Button CssClass="btn btn-transparent fs-4" ID="Button1" runat="server" Text="Abbonamento standard" OnClick="vaiA_sezioneAbbonamenti"  CommandArgument="standard"/>
+                         <img class="ImgAbbonamento" src="https://img.favpng.com/13/3/10/drawing-download-infant-baby-shower-clip-art-png-favpng-XLeV1zdTwPwmntCNSy2V8f10e.jpg" />
+                         <h4 class="text-center p-2"> testo a caso bello bello che figo ciao ciao </h4>
+                         <h6>costo 59 euro</h6>
+                     </div>
+                 </div>
+                 <div class="col-4">
+                     <div class="bg-warning border border-2 d-flex flex-column align-items-center altezza">
+                         <asp:Button CssClass="btn btn-transparent fs-4" ID="Button4" runat="server" Text="Abbonamento Advanced"  OnClick="vaiA_sezioneAbbonamenti" CommandArgument="advanced"/>
+                         <img class="ImgAbbonamento" src="https://media.istockphoto.com/id/1482199015/it/foto/felice-cucciolo-welsh-corgi-14-settimane-cane-ammiccante-ansimante-e-seduto-isolato-su-bianco.jpg?s=1024x1024&w=is&k=20&c=ZXEHnkKJmtPodiQIHgJuBQg5ioiGKv-rftqPx0cvk40=" />
+                          <h4 class="text-center p-2"> testo a caso bello bello che figo ciao ciao </h4>
+                          <h6>costo 79 euro</h6>
+                     </div>
+                 </div>
+                 <div class="col-4">
+                     <div class="bg-danger border border-1 d-flex flex-column align-items-center altezza">
+                         <asp:Button CssClass="btn btn-transparent fs-4" ID="Button5" runat="server" Text="Abbonamento PREMIUM"  OnClick="vaiA_sezioneAbbonamenti" CommandArgument="premium"/>
+                         <img class="ImgAbbonamento" src="https://images-na.ssl-images-amazon.com/images/I/719g3CoD3UL._AC_SL1500_.jpg" />
+                         <h4 class="text-center p-2"> testo a caso bello bello che figo ciao ciao </h4>
+                          <h6>costo 179 euro</h6>
+                     </div>
+                 </div>
+
+             </div>
 
 
 
-                    <%-- RIEPILOGO ORDINI  --%>
+    <%-- RIEPILOGO ORDINI  --%>
                     <div id="riepilogoOrdini" runat="server">
                         <div id="noOrder" runat="server" class="text-center sexyPink2 py-3" style="display: none">
                             <p>Non ci sono ordini da visualizzare.</p>

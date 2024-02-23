@@ -102,6 +102,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AcquistoAbbonamento.aspx" />
     <Content Include="assets\imgs\-1-kxn9tz.svg" />
     <Content Include="About.aspx" />
     <Content Include="assets\css\login.css" />
@@ -226,6 +227,14 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abbonamento.cs" />
+    <Compile Include="AcquistoAbbonamento.aspx.cs">
+      <DependentUpon>AcquistoAbbonamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcquistoAbbonamento.aspx.designer.cs">
+      <DependentUpon>AcquistoAbbonamento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>

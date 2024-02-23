@@ -493,5 +493,32 @@ namespace U4_BW1_LL
                 orderDetailsRepeater.DataBind();
             }
         }
+
+        protected void vaiA_sezioneAbbonamenti(object sender, EventArgs e)
+        {
+            // prendere il commandargument del bottone cliccato
+            Button btn = (Button)sender;
+
+            string commandArgument = btn.CommandArgument;
+
+            if (commandArgument == "standard")
+            {
+                Abbonamento nuovoAbbonamento = new Abbonamento("standard", 59, 365);
+                Session["tipoAbbonamento"] = nuovoAbbonamento;
+            }
+            else if (commandArgument == "advanced")
+            {
+                Abbonamento nuovoAbbonamento = new Abbonamento("advanced", 79, 365);
+                Session["tipoAbbonamento"] = nuovoAbbonamento;
+            }
+            else if (commandArgument == "premium")
+            {
+                Abbonamento nuovoAbbonamento = new Abbonamento("premium", 179, 365);
+                Session["tipoAbbonamento"] = nuovoAbbonamento;
+            }
+
+
+            Response.Redirect("AcquistoAbbonamento.aspx");
+        }
     }
 }
